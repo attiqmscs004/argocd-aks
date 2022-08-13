@@ -16,7 +16,7 @@ spec:
         app: kuard
     spec:
       containers:
-      - image: gcr.io/kuar-demo/kuard-amd64:blue
+      - image: gcr.io/kuar-demo/kuard-amd64:green
         name: kuard
         ports:
         - containerPort: 8080
@@ -25,7 +25,7 @@ spec:
       stableService: kuard-stable
       canaryService: kuard-canary
       steps:
-      - setWeight: 50
+      - setWeight: 10
       - pause: {}
 ---
 apiVersion: v1
